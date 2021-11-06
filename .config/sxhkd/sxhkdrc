@@ -33,7 +33,7 @@ super + z
 
 
 super + v 
-    redshift -P -O 7000
+    redshift -P -O 6500
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -44,6 +44,11 @@ super + Escape
 super + x
     feh --bg-fill --randomize ~/Imágenes/Wallpapers/
 
+# shutdown
+
+super + alt + ctrl + q
+
+    shutdown -h now
 # lock screen
 
 super + shift + x
@@ -102,7 +107,7 @@ super + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
-super + bracket{left,right}
+ctrl + alt + {Left,Right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop

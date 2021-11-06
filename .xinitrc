@@ -54,14 +54,14 @@ export GDK_BACKEND=x11
 export QT_QPA_PLATFORMTHEME=qt5ct
 setxkbmap es & 
 war -R
+
+
 #Here Bspwm is kept as default
 session=${1:-bspwm}
-
 
 case $session in
     cinnamon          ) exec cinnamon-session;;
     bspwm             ) exec bspwm;;
-    lxqt              ) exec startlxqt;;
     # No known session, try to run it as command
     *                 ) exec $1;;
 esac
