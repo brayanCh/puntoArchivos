@@ -60,7 +60,7 @@ war -R
 session=${1:-bspwm}
 
 case $session in
-    cinnamon          ) exec cinnamon-session;;
+    mate              ) exec mate-session;;
     bspwm             ) exec bspwm;;
     # No known session, try to run it as command
     *                 ) exec $1;;

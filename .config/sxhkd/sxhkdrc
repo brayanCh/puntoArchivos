@@ -17,10 +17,22 @@ super + alt + b
 
     killall -q polybar
 
+# st for low ram use
+
+super + alt + ctrl + l
+    st
+
+# pantallazo
+
+super + shift + s
+    spectacle -r
+
 # put back polybar
 
 super + shift + b
     ~/.config/polybar/docky/launch.sh
+
+
 # suspend
 
 super + shift + z
@@ -49,6 +61,13 @@ super + x
 super + alt + ctrl + q
 
     shutdown -h now
+    
+# reboot
+
+super + alt + ctrl + r
+
+    reboot
+    
 # lock screen
 
 super + shift + x

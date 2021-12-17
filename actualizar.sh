@@ -1,12 +1,6 @@
 #!/bin/bash
 
-cp ~/.vimrc ./
-cp ~/.xinitrc ./
-cp ~/.Xdefaults ./
+cp ~/{.Xdefaults,.xinitrc,.vimrc} ./
 
-cp ~/.config/bspwm/bspwmrc ./.config/bspwm/
-cp ~/.config/kitty/kitty.conf ./.config/kitty
-cp ~/.config/sxhkd/sxhkdrc ./.config/sxhkd
-cp ~/.config/picom.conf ./.config/
-cp ~/.config/ranger/* ./.config/ranger
+cp -r ~/.config/{bspwm,kitty,picom.conf,ranger,rofi,sxhkd} ./.config/
 
