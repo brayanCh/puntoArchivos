@@ -51,7 +51,6 @@ fi
 export XDG_SESSION_TYPE=X11
 export GDK_BACKEND=x11
 
-export QT_QPA_PLATFORMTHEME=qt5ct
 setxkbmap es & 
 war -R
 
@@ -60,7 +59,7 @@ war -R
 session=${1:-bspwm}
 
 case $session in
-    mate              ) exec mate-session;;
+    cinnamon          ) exec cinnamon-session;;
     bspwm             ) exec bspwm;;
     # No known session, try to run it as command
     *                 ) exec $1;;
