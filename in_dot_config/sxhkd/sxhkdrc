@@ -1,6 +1,12 @@
-#
 # wm independent hotkeys
-#
+
+# audio controls
+XF86AudioLowerVolume
+  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+XF86AudioRaiseVolume
+  wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
+XF86AudioMute
+  wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
 # terminal emulator
 super + Return
@@ -10,33 +16,36 @@ super + Return
 super + d
     ~/.config/rofi/launchers/misc/launcher.sh
 
+# Change keyboard layouts
+
+super + c + e
+    setxkbmap es
     
+super + c + u
+    setxkbmap us
+
 # kill polybar
 
 super + alt + b
 
     killall -q polybar
 
-# st for low ram use
-
-super + alt + ctrl + l
-    st
 
 # pantallazo
 
-super + shift + s
+super + p
     spectacle -r
 
 # put back polybar
 
 super + shift + b
-    ~/.config/polybar/docky/launch.sh
+    ~/.config/polybar/launch.sh
 
 
 # suspend
 
 super + shift + z
-     i3lock -i ~/Imágenes/Wallpapers/340.png  && systemctl suspend 
+     i3lock -i ~/Pictures/Wallpapers/340.png  && systemctl suspend 
 
 # redshift
 
@@ -54,7 +63,7 @@ super + Escape
 # put a background
 
 super + x
-    feh --bg-fill --randomize ~/Imágenes/Wallpapers/
+    feh --bg-fill --randomize ~/Pictures/Wallpapers/
 
 # shutdown
 
@@ -62,6 +71,16 @@ super + alt + ctrl + q
 
     shutdown -h now
     
+# picom
+
+super + shift +p
+    
+    picom
+
+super + alt + p
+
+    killall picom
+
 # reboot
 
 super + alt + ctrl + r
@@ -79,7 +98,11 @@ super + shift + x
 
 # quit/restart bspwm
 super + alt + {q,r}
-	bspc {quit,wm -r}
+    shutdown -h now	
+
+# logout
+super + shift + Escape
+    bspc quit
 
 # close and kill
 super + {_,shift + }q

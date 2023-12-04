@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cp ~/{.Xdefaults,.xinitrc,.vimrc} ./
-cp -r .config ~/
+cp -r in_dot_config/* ~/.config
+cp -r in_home/* ~/
